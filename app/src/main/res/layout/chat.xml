@@ -1,0 +1,132 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+
+    android:orientation="horizontal"
+    android:background="@color/white"
+    >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+
+            android:id="@+id/layout1"
+
+
+
+            android:paddingVertical="10dp"
+            >
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/contact_photo"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_gravity="center_vertical"
+                android:src="@drawable/profile"
+                app:civ_border_color="@color/gray"
+
+                />
+
+            <TextView
+
+
+                android:id="@+id/msg1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                android:layout_toRightOf="@id/contact_photo"
+                android:background="@drawable/rounded_corners"
+                android:padding="10dp"
+                android:text="hello"
+                android:textColor="@color/black"
+                android:textSize="18sp">
+
+            </TextView>
+
+            <TextView
+
+
+                android:id="@+id/date1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/msg1"
+                android:paddingHorizontal="10dp"
+                android:gravity="bottom"
+                android:layout_alignBottom="@id/msg1"
+                android:text="date"
+                android:textColor="@color/gray"
+                android:textSize="12sp">
+
+            </TextView>
+
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:id="@+id/layout2"
+
+
+            android:paddingVertical="10dp"
+            >
+
+
+            <TextView
+
+                android:id="@+id/date2"
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toLeftOf="@id/msg2"
+                android:paddingHorizontal="10dp"
+                android:gravity="bottom"
+                android:layout_alignBottom="@id/msg2"
+                android:text="date"
+                android:textColor="@color/gray"
+                android:textSize="12sp">
+
+            </TextView>
+
+            <TextView
+
+                android:id="@+id/msg2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_centerInParent="true"
+                android:background="@drawable/rounded_corners_orange"
+                android:padding="10dp"
+                android:text="hello"
+                android:textColor="@color/white"
+                android:textSize="18sp">
+
+            </TextView>
+
+
+
+        </RelativeLayout>
+
+
+
+    </RelativeLayout>
+
+
+
+
+
+
+
+
+
+
+</RelativeLayout>
