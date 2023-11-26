@@ -25,13 +25,13 @@ public class Search extends AppCompatActivity {
         profileBtn = findViewById(R.id.profilebtn);
         plusBtn = findViewById(R.id.plusbtn);
 
-        homeBtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(Search.this, FeaturedItems.class);
-                startActivity(intent);
-            }
-        });
+//        homeBtn.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                Intent intent = new Intent(Search.this, FeaturedItems.class);
+//                startActivity(intent);
+//            }
+//        });
 
         chatBtn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -49,13 +49,13 @@ public class Search extends AppCompatActivity {
             }
         });
 
-        plusBtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(Search.this, PostItem.class);
-                startActivity(intent);
-            }
-        });
+//        plusBtn.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                Intent intent = new Intent(Search.this, PostItem.class);
+//                startActivity(intent);
+//            }
+//        });
         arrowOne.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

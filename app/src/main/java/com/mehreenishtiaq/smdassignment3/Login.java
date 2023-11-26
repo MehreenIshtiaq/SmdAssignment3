@@ -67,7 +67,7 @@ public class Login extends AppCompatActivity {
     }
 
     private void userLogin(String email, String password) {
-        String url = "http://yourserver.com/login.php"; // Replace with your server URL
+        String url = "http://192.168.10.6/login.php"; // Replace with your server URL
 
         dialog.setTitle("Logging In");
         dialog.setMessage("Please wait while we log you in");
@@ -77,10 +77,10 @@ public class Login extends AppCompatActivity {
                 response -> {
                     dialog.dismiss();
                     Toast.makeText(getApplicationContext(), response, Toast.LENGTH_LONG).show();
-                    if (response.contains("successful")) {
-                        Intent intent = new Intent(Login.this, FeaturedItems.class);
-                        startActivity(intent);
-                    }
+//                    if (response.contains("successful")) {
+//                        Intent intent = new Intent(Login.this, FeaturedItems.class);
+//                        startActivity(intent);
+//                    }
                 },
                 error -> {
                     dialog.dismiss();

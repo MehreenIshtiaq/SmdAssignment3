@@ -24,26 +24,26 @@ public class TakePhoto extends AppCompatActivity {
         FragmentTransaction transaction = fragmentManager.beginTransaction();
 
         // Replace the FragmentContainerView with your fragment
-        transaction.replace(R.id.cameraView, new UploadPhotoFragment());
+//        transaction.replace(R.id.cameraView, new UploadPhotoFragment());
 
         // Commit the transaction
         transaction.commit();
 
         Button photo = findViewById(R.id.photoButton);
-        photo.setOnClickListener(new View.OnClickListener(){
-
-            @Override
-            public void onClick(View v) {
-
-                FragmentManager fragmentManager = getSupportFragmentManager();
-
-                fragmentManager.beginTransaction()
-                        .replace(R.id.cameraView, UploadPhotoFragment.class, null)
-                        .setReorderingAllowed(true)
-                        .addToBackStack("name") // Name can be null
-                        .commit();
-            }
-        });
+//        photo.setOnClickListener(new View.OnClickListener(){
+//
+//            @Override
+//            public void onClick(View v) {
+//
+//                FragmentManager fragmentManager = getSupportFragmentManager();
+//
+//                fragmentManager.beginTransaction()
+//                        .replace(R.id.cameraView, UploadPhotoFragment.class, null)
+//                        .setReorderingAllowed(true)
+//                        .addToBackStack("name") // Name can be null
+//                        .commit();
+//            }
+//        });
 
 
     }

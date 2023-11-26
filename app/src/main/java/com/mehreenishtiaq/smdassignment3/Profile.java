@@ -42,13 +42,13 @@ public class Profile extends AppCompatActivity {
                 startActivity(intent);
             }
         });
-        homeBtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(Profile.this, FeaturedItems.class);
-                startActivity(intent);
-            }
-        });
+//        homeBtn.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                Intent intent = new Intent(Profile.this, FeaturedItems.class);
+//                startActivity(intent);
+//            }
+//        });
 
         searchBtn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -66,12 +66,12 @@ public class Profile extends AppCompatActivity {
             }
         });
 
-        plusBtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(Profile.this, PostItem.class);
-                startActivity(intent);
-            }
-        });
+//        plusBtn.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                Intent intent = new Intent(Profile.this, PostItem.class);
+//                startActivity(intent);
+//            }
+//        });
     }
 }

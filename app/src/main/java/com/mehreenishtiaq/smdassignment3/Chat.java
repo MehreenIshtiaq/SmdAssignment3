@@ -31,13 +31,13 @@ public class Chat extends AppCompatActivity {
             }
         });
 
-        homeBtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(Chat.this, FeaturedItems.class);
-                startActivity(intent);
-            }
-        });
+//        homeBtn.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                Intent intent = new Intent(Chat.this, FeaturedItems.class);
+//                startActivity(intent);
+//            }
+//        });
 
         searchBtn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -55,12 +55,12 @@ public class Chat extends AppCompatActivity {
             }
         });
 
-        plusBtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(Chat.this, PostItem.class);
-                startActivity(intent);
-            }
-        });
+//        plusBtn.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                Intent intent = new Intent(Chat.this, PostItem.class);
+//                startActivity(intent);
+//            }
+//        });
     }
 }

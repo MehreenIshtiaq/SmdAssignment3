@@ -1,41 +1,44 @@
 package com.mehreenishtiaq.smdassignment3;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.os.Handler;
-
 import androidx.appcompat.app.AppCompatActivity;
-
-import com.google.firebase.auth.FirebaseAuth;
 
 public class SpotIt extends AppCompatActivity {
 
-    FirebaseAuth mAuth;
-
     private static final int SPLASH_DURATION = 5000;
+    private SharedPreferences sharedPreferences;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_spot_it);
 
-        mAuth = FirebaseAuth.getInstance();
+        sharedPreferences = getSharedPreferences("MySharedPref", MODE_PRIVATE);
 
-        if (mAuth.getCurrentUser() != null) {
-            // User is already logged in, go directly to the FeaturedItems screen
+        new Handler().postDelayed(new Runnable() {
+            @Override
+            public void run() {
+                checkLoginStatus();
+            }
+        }, SPLASH_DURATION);
+    }
+
+    private void checkLoginStatus() {
+        // Check if user is logged in using Shared Preferences
+        boolean isLoggedIn = sharedPreferences.getBoolean("isLoggedIn", false);
+
+        if (isLoggedIn) {
+            // User is logged in, go directly to the FeaturedItems screen
             Intent intent = new Intent(SpotIt.this, FeaturedItems.class);
             startActivity(intent);
-            finish();
         } else {
-            // User is not logged in, show the splash screen for 5 seconds
-            new Handler().postDelayed(new Runnable() {
-                @Override
-                public void run() {
-                    Intent intent = new Intent(SpotIt.this, Login.class);
-                    startActivity(intent);
-                    finish();
-                }
-            }, SPLASH_DURATION);
+            // User is not logged in, redirect to Login screen
+            Intent intent = new Intent(SpotIt.this, Login.class);
+            startActivity(intent);
         }
+        finish();
     }
 }
